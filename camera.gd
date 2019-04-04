@@ -36,7 +36,7 @@ func _process(delta: float) -> void:
 	image.flip_y()
 	images.push_back(image)
 
-func _on_animation_player_animation_finished(anim_name: String) -> void:
+func _on_AnimationPlayer_animation_finished(anim_name):
 	var count = 0
 	for i in images:
 		var image : Image = i

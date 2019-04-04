@@ -21,7 +21,9 @@ config/icon="res://icon.png"
 
 [display]
 
-window/size/fullscreen=true
+window/size/height=768
+window/size/resizable=false
+window/size/borderless=true
 window/dpi/allow_hidpi=true
 window/vsync/use_vsync=false
 

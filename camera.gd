@@ -3,6 +3,8 @@
 
 extends Camera
 
+var images = []
+
 func _ready() -> void:
 	if OS.has_feature("standalone"):
 		get_viewport().msaa = Viewport.MSAA_2X
@@ -33,8 +35,12 @@ func _process(delta: float) -> void:
 
 		# The viewport must be flipped to match the rendered window
 		image.flip_y()
-
-		var error := image.save_png("user://render/" + str(Engine.get_frames_drawn()) + ".png")
+		images.push_back(image)
 
 func _on_animation_player_animation_finished(anim_name: String) -> void:
+	var count = 0
+	for i in images:
+		var image : Image = i
+		var error := image.save_png("user://render/" + str(count) + ".png")
+		count += 1
 	get_tree().quit()

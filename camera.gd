@@ -26,12 +26,12 @@ func _process(delta: float) -> void:
 		get_viewport().set_clear_mode(Viewport.CLEAR_MODE_ONLY_NEXT_FRAME)
 
 		var image := get_viewport().get_texture().get_data()
-		image.generate_mipmaps()
-		image.resize(
-				get_viewport().size.x / 4,
-				get_viewport().size.y / 4,
-				Image.INTERPOLATE_TRILINEAR
-		)
+#		image.generate_mipmaps()
+#		image.resize(
+#				get_viewport().size.x / 4,
+#				get_viewport().size.y / 4,
+#				Image.INTERPOLATE_TRILINEAR
+#		)
 
 		# The viewport must be flipped to match the rendered window
 		image.flip_y()

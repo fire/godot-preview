@@ -4,7 +4,7 @@ importer="texture"
 type="StreamTexture"
 path.s3tc="res://.import/Suzanne_MetallicRoughness.png-17bc0909177abdcbd0e537dbb8c09fe1.s3tc.stex"
 metadata={
-"imported_formats": [ "s3tc" ],
+"imported_formats": [ "bptc", "s3tc" ],
 "vram_texture": true
 }
 

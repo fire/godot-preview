@@ -4,7 +4,7 @@ importer="texture"
 type="StreamTexture"
 path.s3tc="res://.import/Suzanne_BaseColor.png-db0467478f2dcfa374b4e8d1b279a89b.s3tc.stex"
 metadata={
-"imported_formats": [ "s3tc" ],
+"imported_formats": [ "bptc", "s3tc" ],
 "vram_texture": true
 }
 

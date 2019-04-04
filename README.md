@@ -37,3 +37,4 @@ Copyright © 2019 Hugo Locurcio and contributors
   the MIT license; see [LICENSE.md](LICENSE.md) for more information.
 - The Suzanne model was taken from the
   [glTF samples repository](https://github.com/KhronosGroup/glTF-Sample-Models/tree/master/2.0/Suzanne).
+- https://hdrihaven.com/hdri/?c=studio&h=studio_small_03

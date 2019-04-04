@@ -11,6 +11,7 @@ background_sky = SubResource( 1 )
 background_sky_custom_fov = 76.8
 background_sky_orientation = Basis( -0.138755, 0, 0.990327, 0, 1, 0, -0.990327, 0, -0.138755 )
 background_color = Color( 1, 1, 1, 1 )
+background_energy = 0.2
 ambient_light_color = Color( 0.5, 0.5, 0.5, 1 )
 tonemap_mode = 3
 ssao_quality = 2

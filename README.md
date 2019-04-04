@@ -29,6 +29,10 @@ by running the following command while in the `render/` directory:
 ffmpeg -r 60 -f image2 -s 2560x1440 -i %d.png -vcodec libx264 -crf 15 video.mp4
 ```
 
+```bash
+ffmpeg -i %d.png video.mp4
+```
+
 ## License
 
 Copyright © 2019 Hugo Locurcio and contributors

@@ -33,6 +33,13 @@ ffmpeg -r 60 -f image2 -s 2560x1440 -i %d.png -vcodec libx264 -crf 15 video.mp4
 ffmpeg -i %d.png video.mp4
 ```
 
+## Visual diff
+
+```
+npm install --global reg-cli
+reg-cli.cmd .\actual\ .\expected\ .\diff\ -R report.html -J report.json
+```
+
 ## License
 
 Copyright © 2019 Hugo Locurcio and contributors

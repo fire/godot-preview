@@ -59,7 +59,9 @@ func _process(delta):
 	images[Engine.get_frames_drawn()] = image
 
 func _on_AnimationPlayer_animation_finished(anim_name):
+	var count = 0
 	for i in images:
 		var image : Image = images[i]
-		var error := image.save_png("user://actual/" + str(i) + ".png")
+		var error := image.save_png("user://actual/" + str(count) + ".png")
+		count += 1
 	get_tree().quit()

@@ -23,9 +23,9 @@ tracks/0/keys = {
 size = Vector2( 64, 64 )
 
 [node name="WorldEnvironment" type="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.0133, 0, 0 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "move_camera"
 anims/move_camera = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
@@ -52,6 +52,15 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.1385, 29.2486 )
 current = true
 script = ExtResource( 1 )
 
-[node name="Scene Root" parent="." instance=ExtResource( 2 )]
+[node name="target" type="Spatial" parent="."]
 transform = Transform( 100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0 )
-[connection signal="animation_finished" from="AnimationPlayer" to="Origin/Camera" method="_on_animation_player_animation_finished"]
+
+[node name="Scene Root" parent="." instance=ExtResource( 2 )]
+editor/display_folded = true
+transform = Transform( 100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0 )
+
+[node name="AnimationPlayer" parent="Scene Root" index="0"]
+autoplay = "Take 001"
+[connection signal="animation_finished" from="Scene Root/AnimationPlayer" to="Origin/Camera" method="_on_AnimationPlayer_animation_finished"]
+
+[editable path="Scene Root"]

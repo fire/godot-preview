@@ -20,9 +20,9 @@ or later.**
 ## Usage
 
 When run *outside of the editor*, frames will be rendered and saved to
-PNG images in the `render/` directory located in the project data directory.
+PNG images in the `out/` directory located in the project data directory.
 These can be combined into a video using [FFmpeg](https://ffmpeg.org/)
-by running the following command while in the `render/` directory:
+by running the following command while in the `out/` directory:
 
 ```bash
 ffmpeg -r 60 -f image2 -s 2560x1440 -i %d.png -vcodec libx264 -crf 15 video.mp4
@@ -36,7 +36,7 @@ ffmpeg -i %d.png video.mp4
 
 ```
 npm install --global reg-cli
-reg-cli.cmd .\actual\ .\expected\ .\diff\ -R report.html -J report.json
+reg-cli.cmd .\out\ .\expected\ .\diff\ -R report.html -J report.json
 ```
 
 ## License

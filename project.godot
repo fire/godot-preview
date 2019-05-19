@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Video Rendering Test"
+config/name="Preview"
 run/main_scene="res://demo.tscn"
 run/low_processor_mode=true
 config/icon="res://icon.png"

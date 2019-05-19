@@ -37,8 +37,8 @@ func _process(delta):
 	# The first frame is always black, there's no point in saving it
 	if Engine.get_frames_drawn() == 0:
 		return
-	if Engine.get_frames_drawn() <= frame_acc + 60:
-		return
+#	if Engine.get_frames_drawn() <= frame_acc + 60:
+#		return
 	frame_acc = Engine.get_frames_drawn()
 	print("Rendering frame {frame}...".format({
 				frame = Engine.get_frames_drawn(),

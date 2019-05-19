@@ -17,12 +17,13 @@ _global_script_class_icons={
 
 config/name="Video Rendering Test"
 run/main_scene="res://demo.tscn"
+run/low_processor_mode=true
 config/icon="res://icon.png"
 
 [display]
 
-window/size/width=320
-window/size/height=180
+window/size/width=1920
+window/size/height=1080
 window/size/resizable=false
 window/size/borderless=true
 window/dpi/allow_hidpi=true

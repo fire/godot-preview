@@ -1,13 +1,13 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://camera.gd" type="Script" id=1]
-[ext_resource path="res://scenes/34_female_head_v11_01_02_003/female_head_v11_01_02_003.fbx" type="PackedScene" id=2]
+[ext_resource path="res://scenes/suzanne/Suzanne.gltf" type="PackedScene" id=2]
 
 [sub_resource type="Animation" id=1]
 resource_name = "move_camera"
 length = 3.0
 tracks/0/type = "value"
-tracks/0/path = NodePath("Origin:rotation_degrees")
+tracks/0/path = NodePath("Scene Root/Suzanne:rotation_degrees")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -26,6 +26,7 @@ size = Vector2( 64, 64 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.0133, 0, 0 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "move_camera"
 anims/move_camera = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
@@ -45,10 +46,10 @@ directional_shadow_bias_split_scale = 0.45
 directional_shadow_max_distance = 120.0
 
 [node name="Origin" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.84487, 0 )
+transform = Transform( -0.447849, 0, 0.894109, 0, 1, 0, -0.894109, 0, -0.447849, 0, 2.84487, 0 )
 
 [node name="Camera" type="Camera" parent="Origin"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.1385, 29.2486 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.1385, 43.408 )
 current = true
 script = ExtResource( 1 )
 
@@ -56,11 +57,9 @@ script = ExtResource( 1 )
 transform = Transform( 100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0 )
 
 [node name="Scene Root" parent="." instance=ExtResource( 2 )]
-editor/display_folded = true
-transform = Transform( 100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0 )
 
-[node name="AnimationPlayer" parent="Scene Root" index="0"]
-autoplay = "Take 001"
-[connection signal="animation_finished" from="Scene Root/AnimationPlayer" to="Origin/Camera" method="_on_AnimationPlayer_animation_finished"]
+[node name="Suzanne" parent="Scene Root" index="0"]
+transform = Transform( -4.37114e-07, 0, 10, 0, 10, 0, -10, 0, -4.37114e-07, 4.94615, 9.90841, 0 )
+[connection signal="animation_finished" from="AnimationPlayer" to="Origin/Camera" method="_on_AnimationPlayer_animation_finished"]
 
 [editable path="Scene Root"]

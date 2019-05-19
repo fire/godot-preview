@@ -12,9 +12,9 @@ func _ready() -> void:
 #		get_viewport().size *= 4
 	var directory: = Directory.new()
 	directory.list_dir_begin()
-	if directory.dir_exists("user://actual"):
-		rm_contents("user://actual")
-	directory.make_dir("user://actual")
+	if directory.dir_exists("user://out"):
+		rm_contents("user://out")
+	directory.make_dir("user://out")
 
 
 func rm_contents(path):
@@ -62,6 +62,6 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 	var count = 0
 	for i in images:
 		var image : Image = images[i]
-		var error := image.save_png("user://actual/" + str(count) + ".png")
+		var error := image.save_png("user://out/" + str(count) + ".png")
 		count += 1
 	get_tree().quit()
